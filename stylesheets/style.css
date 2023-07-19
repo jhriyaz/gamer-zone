@@ -7,10 +7,6 @@
     padding: 0;
 }
 
-header {
-    display: none;
-}
-
 .buttonPrimary {
     color: #FFF;
     font-size: 20px;
@@ -91,7 +87,7 @@ nav {
 }
 
 /* responsive section for nav bar */
-@media screen and (max-width:680px) {
+@media screen and (max-width:640px) {
 
     .navSection,
     .navItems {
@@ -105,31 +101,52 @@ nav {
 
     nav {
         box-shadow: none;
+        margin-bottom: 60px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:768px){
+    .navSection,
+    .navItems {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navItems {
+        margin-top: 10px;
+    }
+
+    nav {
+        box-shadow: none;
+        margin-bottom: 60px;
     }
 }
 
 
 /* banner section styles start from here */
-.bannerTexts {
-    background-image: url(../images/bannerbg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 50%;
-    padding-left: 200PX;
-    background-position: left bottom;
-
-    height: auto;
-}
-
-.bannerImages {
-    width: 50%;
-    padding-right: 200PX;
-}
-
-.bannerSection {
+.bannerSection{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 700px;
+}
+
+.bannerTexts{
+    background-image: url(./../images/bannerbg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 50%;
+    padding-left:200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bannerImages>img {
+    width: 100%;;
+}
+.bannerImages{
+    
+    padding-right: 200px
 }
 
 .bannerTexts h2 {
@@ -138,7 +155,6 @@ nav {
     font-weight: 600;
     margin: 10px 0px;
 }
-
 .bannerTexts h1 {
     font-size: 95px;
     font-weight: 800;
@@ -150,14 +166,6 @@ nav {
     -webkit-text-fill-color: transparent;
     margin: 10px 0px;
 }
-
-.bannerTexts p {
-    color: #534C64;
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: 10px;
-}
-
 .btn1 {
     background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
 }
@@ -166,32 +174,24 @@ nav {
     background: #4EC5F7;
 }
 
-.bannerImages>img {
-    width: 100%;
-}
-
 /* responsive section for banner section */
-@media screen and (max-width:680px) {
+@media screen and (max-width:640px) {
     .bannerSection {
         flex-direction: column-reverse;
+        background-position: bottom right;
     }
-
-    .bannerTexts {
+    .bannerImages{
+    
+        padding: 20px!important
+    }
+    .bannerTexts{
+        padding: 20px!important;
         width: 100%;
-        padding: 50px 0px 50px 35px;
     }
-
-    .bannerImages {
-        width: 100%;
-        padding: 30px;
-
-    }
-
 }
-
 /* we are gamer section styles start from here */
 .weAreGamerSection {
-    padding: 0px 200px;
+    padding: 10px 200px;
     background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
     justify-content: space-between;
     display: flex;
@@ -239,10 +239,9 @@ nav {
     line-height: 45px;
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:640px) {
     .weAreGamerSection {
-        display: block;
-
+        flex-direction: column;
         padding: 20px;
     }
 
@@ -269,6 +268,36 @@ nav {
         font-size: 20px;
     }
 }
+@media screen and (min-width:640px) and (max-width:768px){
+    .weAreGamerSection {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .weAreGamerText {
+        text-align: center;
+        margin: 50px 0px;
+    }
+
+    .weAreGamerImage {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .weAreGamerImage>img,
+    .weAreGamerText {
+        width: 100%;
+    }
+
+    .weAreGamerText>p {
+        font-size: 12px;
+    }
+
+    .weAreGamerText>h3 {
+        font-size: 20px;
+    }
+}
+
 
 /* Online Games Funny Videos section styles start from here */
 .onlineGameSection {
@@ -378,7 +407,7 @@ nav {
 }
 
 /* Online Games Funny Videos section responsive styles start from here */
-@media screen and (max-width:680px) {
+@media screen and (max-width:640px) {
     .onlineGameSection>h1 {
         font-size: 24px;
     }
@@ -398,7 +427,26 @@ nav {
 
     }
 }
+@media screen and (min-width:640px) and (max-width:768px){
+    .onlineGameSection>h1 {
+        font-size: 24px;
+    }
 
+    .onlineGameSection {
+        padding: 0px 20px;
+    }
+
+    .onlineGameCards {
+
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .onlineGameSection p {
+        font-size: 12px;
+        text-align: center;
+
+    }
+}
 /* Play Instantly section styles start from here */
 .playInstantlySection {
     padding: 50px 200px;
@@ -447,7 +495,38 @@ nav {
 }
 
 /* Play Instantly section responsive styles start from here */
-@media screen and (max-width:680px) {
+@media screen and (max-width:640px) {
+    .playInstantlySection {
+        padding: 50px 20px;
+    }
+
+    .playInstantlySection>div {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .playInstantlySectionText {
+        padding: 30px;
+        width: 100%;
+    }
+
+    .playInstantlySectionImage {
+        width: 100%;
+        padding: 10px 20px;
+
+    }
+
+    .playInstantlySectionImage>img {
+        width: 80%;
+        padding-left: 50px;
+    }
+
+    .playInstantlySection>img {
+        width: 140px;
+        left: 10%;
+    }
+}
+@media screen and (min-width:640px) and (max-width:768px){
     .playInstantlySection {
         padding: 50px 20px;
     }
@@ -530,7 +609,41 @@ nav {
 }
 
 /*  Careers section responsive styles start from here  */
-@media screen and (max-width:680px) {
+@media screen and (max-width:640px) {
+    .careersSection {
+        padding: 10px 0px 0px 15px;
+        flex-direction: column;
+    }
+    .careersSectionText{
+        padding-right: 15px;
+    }
+    .careersSectionText,
+    .careersSectionImage {
+        width: 100%;
+        
+    }
+
+    .careersSectionText>div {
+        gap: 60px;
+
+    }
+
+    .careersSectionText li {
+        font-size: 15px;
+    }
+
+    .careersSectionImage>img {
+        padding-top: 60px;
+        width: 100%;
+    }
+
+    .careersSectionText button {
+        font-size: 12px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:768px){
     .careersSection {
         padding: 10px 0px 0px 15px;
         flex-direction: column;
@@ -618,7 +731,7 @@ nav {
 }
 
 /* game section responsive style starts from here */
-@media screen and (max-width:680px) {
+@media screen and (max-width:640px) {
     .gameSectionCards {
         padding: 30px 10px;
     }
@@ -639,5 +752,162 @@ nav {
     .gameSectionCard>a>p {
         color: #0B0223;
         font-size: 12px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:768px){
+    .gameSectionCards {
+        padding: 30px 10px;
+    }
+
+    .gameSectionColoumn1{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gameSectionColoumn2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gameSectionCard>a,
+    .gameSectionCard>img {
+        width: 40%;
+    }
+
+    .gameSectionCard>a>p {
+        color: #0B0223;
+        font-size: 12px;
+    }
+}
+/* footer section styles start from here */
+.footer{
+    background: #0B0223;
+    padding: 100px 200px;
+}
+.footer .navLogo{
+
+ display: flex;
+ justify-content: center;
+}
+.footer h1{
+    color: white;
+}
+.links {
+    display: grid;
+    justify-content: center;
+    gap: 10px;
+    grid-template-columns: repeat(6,1fr);
+    padding: 20px 300px;
+}
+.links li{
+    list-style: none;
+
+}
+.links a{
+    text-align: center;
+    text-decoration: none;
+}
+.quickLinks li >a{
+    
+    color: #FFF;
+font-size: 18px;
+font-weight: 600;
+}
+.socialLinks{
+    font-size: 30px;
+    padding: 20px 350px;
+}
+.socialLinks li >a>i{
+
+    color: #ffffff;
+    text-shadow: 2px 2px 3px rgb(255, 0, 0);
+}
+.importantLinks{
+    grid-template-columns: repeat(4,200px);
+    text-align: center;
+    justify-content: left;
+    padding: 20px 320px;
+}
+.importantLinks li >a{
+    color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-size: 16px;
+font-weight: 500;
+}
+.footer>p{
+    color: rgba(255, 255, 255, 0.60);
+text-align: center;
+font-size: 16px;
+font-weight: 500;
+padding-top: 20px;
+}
+
+/* footer section responsive styles start from here */
+@media screen and (max-width:640px) {
+    .footer{
+        padding: 20px 10px;
+    }
+    .quickLinks ,.socialLinks{
+        grid-template-columns: repeat(3,1fr);
+        padding: 20px;
+        gap :15px;
+        justify-content: center;
+    }
+    .socialLinks a{
+        text-align: center;
+    }
+    .socialLinks i{
+        font-size: 20px;
+    }
+    .quickLinks{
+
+        font-size: 12px;
+    }
+    .links li{
+        text-align: center;
+    }
+    .quickLinks li >a {
+    font-size: 14px;
+    }
+    .importantLinks li >a {
+        font-size: 13px;
+    }
+    .importantLinks{
+        grid-template-columns: repeat(2,1fr);
+        gap :15px;
+        padding: 20px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:768px){
+    .footer{
+        padding: 20px 10px;
+    }
+    .quickLinks ,.socialLinks{
+        grid-template-columns: repeat(3,1fr);
+        padding: 20px;
+        gap :15px;
+        justify-content: center;
+    }
+    .socialLinks a{
+        text-align: center;
+    }
+    .socialLinks i{
+        font-size: 20px;
+    }
+    .quickLinks{
+
+        font-size: 12px;
+    }
+    .links li{
+        text-align: center;
+    }
+    .quickLinks li >a {
+    font-size: 14px;
+    }
+    .importantLinks li >a {
+        font-size: 13px;
+    }
+    .importantLinks{
+        grid-template-columns: repeat(2,1fr);
+        gap :15px;
+        padding: 20px;
     }
 }
