@@ -349,7 +349,8 @@ nav {
     font-weight: 700;
     text-shadow: 2px 2px 4px red;
 }
-.gameCard>div:hover>a>i{
+
+.gameCard>div:hover>a>i {
     color: #f1c4df;
     font-size: 26px;
     padding-bottom: 3px;
@@ -375,87 +376,268 @@ nav {
     background-image: url(../images/card4.png), linear-gradient(45deg, rgba(121, 56, 56, 0.747), rgba(46, 32, 73, 0.63));
     background-blend-mode: overlay;
 }
+
 /* Online Games Funny Videos section responsive styles start from here */
 @media screen and (max-width:680px) {
     .onlineGameSection>h1 {
-        font-size: 24px;}
+        font-size: 24px;
+    }
 
     .onlineGameSection {
         padding: 0px 20px;
     }
+
     .onlineGameCards {
-        
+
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    .onlineGameSection p {
+        font-size: 12px;
+        text-align: center;
+
+    }
 }
-.onlineGameSection p {
-    font-size: 12px;
-    text-align: center;
-    
-}
-}
+
 /* Play Instantly section styles start from here */
-.playInstantlySection{
+.playInstantlySection {
     padding: 50px 200px;
     margin-top: 30px;
     position: relative;
     margin-bottom: 50px;
 }
-.playInstantlySection>div{
+
+.playInstantlySection>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
-.playInstantlySectionText{
+
+.playInstantlySectionText {
     width: 30%;
 }
-.playInstantlySectionImage{
-    width:50%;
+
+.playInstantlySectionImage {
+    width: 50%;
 }
-.playInstantlySectionText>h1{
+
+.playInstantlySectionText>h1 {
     text-align: right;
     font-size: 48px;
     font-weight: 700;
 }
-.playInstantlySectionText>h1>span{
+
+.playInstantlySectionText>h1>span {
     color: #F948B2;
 }
-.playInstantlySectionText>p{
+
+.playInstantlySectionText>p {
     color: #534C64;
-text-align: right;
-font-size: 18px;
-font-weight: 400;
-margin-top: 20px;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
 }
-.playInstantlySection>img{
+
+.playInstantlySection>img {
     position: absolute;
     bottom: 0px;
-    left:45%
+    left: 45%
 }
+
 /* Play Instantly section responsive styles start from here */
 @media screen and (max-width:680px) {
-    .playInstantlySection{
+    .playInstantlySection {
         padding: 50px 20px;
-}
-.playInstantlySection>div{
-    flex-direction: column;
-    justify-content: center;
-}
-.playInstantlySectionText{
-    padding: 30px;
-    width: 100%;
-}
-.playInstantlySectionImage{
-    width:100%;
-    padding: 10px 20px;
+    }
 
+    .playInstantlySection>div {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .playInstantlySectionText {
+        padding: 30px;
+        width: 100%;
+    }
+
+    .playInstantlySectionImage {
+        width: 100%;
+        padding: 10px 20px;
+
+    }
+
+    .playInstantlySectionImage>img {
+        width: 80%;
+        padding-left: 50px;
+    }
+
+    .playInstantlySection>img {
+        width: 140px;
+        left: 10%;
+    }
 }
-.playInstantlySectionImage>img{
-    width: 80%;
-    padding-left: 50px;
+
+/*  Careers section styles start from here  */
+.careersSection {
+    background-image: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    background-repeat: no-repeat;
+    background-position: left;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 0px 0px 200px;
+    align-items: center;
 }
-.playInstantlySection>img{
-    width: 140px;
-    left: 10%;
+
+.careersSectionText>div {
+    display: flex;
+    gap: 40px;
 }
+
+.careersSectionText {
+    width: 50%;
+}
+
+.careersSectionImage {
+    width: 50%;
+    overflow: hidden;
+}
+
+.careersSectionText h1 {
+    color: #FFF;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.careersSectionText p {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    padding: 30px 0px;
+}
+
+.careersSectionText li {
+    list-style: none;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.careersSectionText button {
+    color: #FF42A5;
+}
+
+/*  Careers section responsive styles start from here  */
+@media screen and (max-width:680px) {
+    .careersSection {
+        padding: 10px 0px 0px 15px;
+        flex-direction: column;
+    }
+    .careersSectionText{
+        padding-right: 15px;
+    }
+    .careersSectionText,
+    .careersSectionImage {
+        width: 100%;
+        
+    }
+
+    .careersSectionText>div {
+        gap: 60px;
+
+    }
+
+    .careersSectionText li {
+        font-size: 15px;
+    }
+
+    .careersSectionImage>img {
+        padding-top: 60px;
+        width: 100%;
+    }
+
+    .careersSectionText button {
+        font-size: 12px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+/* game section style starts from here */
+.gameSectionCards {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 200px;
+}
+
+.gameSectionColoumn1 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 30px;
+    gap: 20px;
+}
+
+.gameSectionColoumn2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px;
+    gap: 20px;
+}
+.gameSectionCard{
+    border: 2px solid transparent;
+    border-radius: 15px;
+}
+.gameSectionCard>a {
+    display: flex;
+    padding: 10px;
+    margin-right: 4px;
+    align-items: center;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.gameSectionCard:hover {
+    border: 2px solid #FF42A5;
+    transition: all 0.7s;
+}
+
+.gameSectionCard:hover p {
+
+    color: #FF42A5;
+    transition: all 0.7s;
+}
+
+.gameSectionCard>a>p {
+    color: #0B0223;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* game section responsive style starts from here */
+@media screen and (max-width:680px) {
+    .gameSectionCards {
+        padding: 30px 10px;
+    }
+
+    .gameSectionColoumn1{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gameSectionColoumn2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gameSectionCard>a,
+    .gameSectionCard>img {
+        width: 40%;
+    }
+
+    .gameSectionCard>a>p {
+        color: #0B0223;
+        font-size: 12px;
+    }
 }
