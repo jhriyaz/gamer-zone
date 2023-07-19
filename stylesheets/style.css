@@ -139,8 +139,9 @@ nav {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:left;
 }
+
 .bannerImages>img {
     width: 100%;;
 }
@@ -180,6 +181,9 @@ nav {
         flex-direction: column-reverse;
         background-position: bottom right;
     }
+    .bannerTexts>div{
+        padding-left: 20px;
+    }
     .bannerImages{
     
         padding: 20px!important
@@ -202,7 +206,7 @@ nav {
 .weAreGamerImage {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     width: 60%;
 }
 
