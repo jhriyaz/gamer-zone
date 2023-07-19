@@ -8,10 +8,14 @@
 }
 
 section {
-    width: 1400px;
+    max-width: 1400px;
     margin: 0 auto;
 }
-
+@media screen and (max-width:576px){
+    section{
+    margin:0px 40px 40px 40px;
+    }
+}
 .buttonPrimary {
     color: #FFF;
     font-size: 20px;
@@ -23,11 +27,12 @@ section {
 }
 
 /* navigation bar styles start from here */
-nav{
+nav {
 
     background: #FFF;
-box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
 }
+
 .navSection {
     display: flex;
     justify-content: space-between;
@@ -76,27 +81,42 @@ box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
     padding: 17px 24px;
 }
 
-.youtubeNav {
+.followUsNavIcon1 {
     color: rgba(246, 28, 13, 1);
 
     font-size: 24px;
 }
 
-.tiktokNav {
+.followUsNavIcon2{
     color: rgba(0, 0, 0, 1);
     text-shadow: 2px 2px 3px rgba(240, 0, 68, 1);
 
     font-size: 24px;
 }
+/* responsive section for nav bar */
+@media screen and (max-width:576px) {
+    .navSection,.navItems{
+        flex-direction: column;
+    }
+    .navItems{
+        margin-top: 10px;
+    }
+    nav{
+        box-shadow: none;
+    }
+    
+}
+
 
 /* banner section styles start from here */
-.mainBanner{
-    
+.mainBanner {
+
     background-image: url(../images/Group\ 14.png);
     background-repeat: no-repeat;
-    background-position: left;
+    background-position:-50px left;
 }
-.bannerSection{
+
+.bannerSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,10 +142,33 @@ box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
     color: #534C64;
     font-size: 20px;
     font-weight: 500;
+    margin-top: 10px;
 }
-.btn1{
-background:linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+
+.btn1 {
+    background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
 }
-.btn2{
-background: #4EC5F7;
+
+.btn2 {
+    background: #4EC5F7;
+}
+.bannerImages>img{
+    width: 100%;
+}
+/* responsive section for banner section */
+@media screen and (max-width:576px) {
+    .bannerSection{
+        flex-direction: column-reverse;
+    }
+    .mainBanner{
+        background-image: none;
+    }
+    .bannerTexts{
+        background-image: url('../images/Group\ 14.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+        padding: 80px 0px;
+    }
+
 }
