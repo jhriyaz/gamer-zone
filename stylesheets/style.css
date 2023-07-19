@@ -7,7 +7,9 @@
     padding: 0;
 }
 
-
+header{
+    display: none;
+}
 .buttonPrimary {
     color: #FFF;
     font-size: 20px;
@@ -88,7 +90,7 @@ nav {
 }
 
 /* responsive section for nav bar */
-@media screen and (max-width:576px) {
+@media screen and (max-width:680px) {
 
     .navSection,
     .navItems {
@@ -108,17 +110,19 @@ nav {
 
 /* banner section styles start from here */
 .bannerTexts {
-    background-image: url(../images/Group\ 14.png);
+    background-image: url(../images/bannerbg.png);
     background-repeat: no-repeat;
     background-size: cover;
     width: 50%;
-    padding: 200px 0px 200px 200px;
+    padding-left: 200PX;
     background-position: left bottom;
+    
+height: auto;
 }
 
 .bannerImages {
     width: 50%;
-}
+padding-right: 200PX;}
 
 .bannerSection {
     display: flex;
@@ -139,6 +143,8 @@ nav {
     /* reference- learn from https://cssgradient.io/blog/css-gradient-text/ */
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     -webkit-background-clip: text;
+    
+background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 10px 0px;
 }
@@ -163,7 +169,7 @@ nav {
 }
 
 /* responsive section for banner section */
-@media screen and (max-width:576px) {
+@media screen and (max-width:680px) {
     .bannerSection {
         flex-direction: column-reverse;
     }
@@ -173,9 +179,75 @@ nav {
 }
     .bannerImages {
         width: 100%;
-        
     padding: 30px;
     
     }
     
+}
+/* we are gamer section styles start from here */
+.weAreGamerSection{
+    padding: 0px 200px;
+    background: linear-gradient(90deg, rgba(255, 66, 165, 0.03) 0%, rgba(255, 66, 165, 0.03) 100%);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+
+}
+.weAreGamerImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+.weAreGamerImage>img{
+    width: 70%;
+}
+.weAreGamerText{
+    text-align: right;
+    margin: 50px 0px;
+}
+.weAreGamerText>h2{
+font-size: 48px;
+font-weight: 700;
+background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+padding-bottom: 25px;
+}
+.weAreGamerText>p{
+    color: #534C64;
+font-size: 18px;
+margin-top: 20px;
+font-weight: 400;
+}
+.weAreGamerText>h3{
+    color: #534C64;
+font-size: 32px;
+font-weight: 700;
+line-height: 45px;
+}
+@media screen and (max-width:680px) {
+    .weAreGamerSection{
+        display: block;
+        
+        padding: 20px;
+    }
+    .weAreGamerText{
+        text-align: center;
+        margin: 50px 0px;
+    }
+    .weAreGamerImage{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .weAreGamerImage>img,.weAreGamerText{
+        width: 100%;
+    }
+    .weAreGamerText>p{
+font-size: 12px;
+    }
+    .weAreGamerText>h3{
+        font-size:20px ;
+    }
 }
