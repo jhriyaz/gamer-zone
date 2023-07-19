@@ -7,14 +7,7 @@
     padding: 0;
 }
 
-section {
-    margin: 0px 200px;
-}
-@media screen and (max-width:576px){
-    section{
-    margin:0px 40px 40px 40px;
-    }
-}
+
 .buttonPrimary {
     color: #FFF;
     font-size: 20px;
@@ -36,7 +29,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0px;
+    padding: 30px 200px;
+
 }
 
 .navLogo {
@@ -86,33 +80,44 @@ nav {
     font-size: 24px;
 }
 
-.followUsNavIcon2{
+.followUsNavIcon2 {
     color: rgba(0, 0, 0, 1);
     text-shadow: 2px 2px 3px rgba(240, 0, 68, 1);
 
     font-size: 24px;
 }
+
 /* responsive section for nav bar */
 @media screen and (max-width:576px) {
-    .navSection,.navItems{
+
+    .navSection,
+    .navItems {
         flex-direction: column;
+        padding: 20px;
     }
-    .navItems{
+
+    .navItems {
         margin-top: 10px;
     }
-    nav{
+
+    nav {
         box-shadow: none;
     }
-    
 }
 
 
 /* banner section styles start from here */
-.mainBanner {
-
+.bannerTexts {
     background-image: url(../images/Group\ 14.png);
     background-repeat: no-repeat;
-    background-position:-50px left;
+    background-size: cover;
+    width: 50%;
+    padding: 200px 0px 200px 200px;
+    background-position: left bottom;
+}
+
+.bannerImages {
+    width: 50%;
 }
 
 .bannerSection {
@@ -120,14 +125,15 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
-.bannerTexts>h2 {
+
+.bannerTexts h2 {
     color: #0B0223;
     font-size: 48px;
     font-weight: 600;
     margin: 10px 0px;
 }
 
-.bannerTexts>h1 {
+.bannerTexts h1 {
     font-size: 95px;
     font-weight: 800;
     /* reference- learn from https://cssgradient.io/blog/css-gradient-text/ */
@@ -151,23 +157,25 @@ nav {
 .btn2 {
     background: #4EC5F7;
 }
-.bannerImages>img{
+
+.bannerImages>img {
     width: 100%;
 }
+
 /* responsive section for banner section */
 @media screen and (max-width:576px) {
-    .bannerSection{
+    .bannerSection {
         flex-direction: column-reverse;
     }
-    .mainBanner{
-        background-image: none;
+.bannerTexts{
+    width: 100%;
+    padding: 50px 0px 50px 35px;
+}
+    .bannerImages {
+        width: 100%;
+        
+    padding: 30px;
+    
     }
-    .bannerTexts{
-        background-image: url('../images/Group\ 14.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: left;
-        padding: 80px 0px;
-    }
-
+    
 }
