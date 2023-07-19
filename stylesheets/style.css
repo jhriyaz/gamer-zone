@@ -375,6 +375,7 @@ nav {
     background-image: url(../images/card4.png), linear-gradient(45deg, rgba(121, 56, 56, 0.747), rgba(46, 32, 73, 0.63));
     background-blend-mode: overlay;
 }
+/* Online Games Funny Videos section responsive styles start from here */
 @media screen and (max-width:680px) {
     .onlineGameSection>h1 {
         font-size: 24px;}
@@ -390,5 +391,71 @@ nav {
     font-size: 12px;
     text-align: center;
     
+}
+}
+/* Play Instantly section styles start from here */
+.playInstantlySection{
+    padding: 50px 200px;
+    margin-top: 30px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.playInstantlySection>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.playInstantlySectionText{
+    width: 30%;
+}
+.playInstantlySectionImage{
+    width:50%;
+}
+.playInstantlySectionText>h1{
+    text-align: right;
+    font-size: 48px;
+    font-weight: 700;
+}
+.playInstantlySectionText>h1>span{
+    color: #F948B2;
+}
+.playInstantlySectionText>p{
+    color: #534C64;
+text-align: right;
+font-size: 18px;
+font-weight: 400;
+margin-top: 20px;
+}
+.playInstantlySection>img{
+    position: absolute;
+    bottom: 0px;
+    left:45%
+}
+/* Play Instantly section responsive styles start from here */
+@media screen and (max-width:680px) {
+    .playInstantlySection{
+        padding: 50px 20px;
+}
+.playInstantlySection>div{
+    flex-direction: column;
+    justify-content: center;
+}
+.playInstantlySectionText{
+    padding: 30px;
+    width: 100%;
+}
+.playInstantlySectionImage{
+    width:100%;
+    padding: 10px 20px;
+
+}
+.playInstantlySectionImage>img{
+    width: 80%;
+    padding-left: 50px;
+}
+.playInstantlySection>img{
+    width: 140px;
+    left: 10%;
 }
 }
